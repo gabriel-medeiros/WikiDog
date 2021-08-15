@@ -52,44 +52,93 @@
                         <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
                                 class="bi bi-search"></i></div>
                         <h1 class="fw-bolder">Procurar cachorro</h1>
-                        <p class="lead fw-normal text-muted mb-0">Nos conte características do cachorro</p>
+                        <p class="lead fw-normal text-muted mb-0">Nos conte características do cachorro para que possamos achá-lo. Aponte ao menos uma característica e traremos uma lista de raças que atendem ao padrão desejado.</p>
                     </div>
                     <div class="row gx-5 justify-content-center">
                         <div class="col-lg-8 col-xl-6">
                             <div id="contactForm">
                                 <!-- Raça input-->
                                 <div class="form-floating mb-3">
-                                    <input class="form-control" id="raca" type="text" placeholder="Raça" />
-                                    <label for="raca">Raça</label>
-                                </div>
-                                <!-- Porte input-->
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" id="porte" type="text" placeholder="Porte" />
-                                    <label for="porte">Porte</label>
+                                    <input type="text" class="form-control" id="breed" placeholder="Raça (Campo autocomplete)">
+                                    <label for="breed">Raça (Campo autocomplete)</label>
                                 </div>
                                 <!-- Origem input-->
                                 <div class="form-floating mb-3">
-                                    <input class="form-control" id="origem" type="text" placeholder="Origem" />
-                                    <label for="origem">Origem</label>
+                                    <input class="form-control" id="origem" type="text" placeholder="Origem (Qual o país do cachorro?)" />
+                                    <label for="origem">Origem (Qual o país do cachorro?)</label>
+                                </div>
+                                <!-- Porte input-->
+                                <div class="mb-3">
+                                    <select class="form-select" aria-label="Selecione o porte do animal">
+                                        <option selected>Buscar pelo Porte</option>
+                                        <option value="small">Pequeno</option>
+                                        <option value="medium">Médio</option>
+                                        <option value="big">Grande</option>
+                                    </select>
                                 </div>
                                 <!-- Expectativa de vida input-->
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" id="exp_vida" type="text"
-                                        placeholder="Expectativa de vida" />
-                                    <label for="exp_vida">Expectativa de vida</label>
+                                <div class="mb-3">
+                                    <select class="form-select" aria-label="Selecione a expectativa de vida do animal">
+                                        <option selected>Buscar pela Expectativa de Vida esperada para o seu dog</option>
+                                        <option value="less10">até 10 anos</option>
+                                        <option value="between10and15">entre 10 e 15 anos</option>
+                                        <option value="between15and20">entre 15 e 20 anos</option>
+                                        <option value="more20">mais de 20 anos</option>
+                                    </select>
                                 </div>
-                                <!-- Submit success message-->
-                                <!--<div class="d-none" id="submitSuccessMessage">
-                                        <div class="text-center mb-3">
-                                            <div class="fw-bolder">Requisição recebida com sucesso!</div>
-                                            A tela que lista as raças encontradas ainda não foi desenvolvida
+                                <div class="mb-3">
+                                    <div>Marque as características que procura num cachorro. Pode marcar mais de uma.</div>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="docil" id="docil">
+                                                    <label class="form-check-label" for="docil">
+                                                        Dócil
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="amigavel" id="amigavel">
+                                                    <label class="form-check-label" for="amigavel">
+                                                        Amigável
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="peludo" id="peludo">
+                                                    <label class="form-check-label" for="peludo">
+                                                        Peludo
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="calmo" id="calmo">
+                                                    <label class="form-check-label" for="calmo">
+                                                        Calmo
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="cao_caca" id="cao_caca">
+                                                    <label class="form-check-label" for="cao_caca">
+                                                        Cão de Caça
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="cao_guia" id="cao_guia">
+                                                    <label class="form-check-label" for="cao_guia">
+                                                        Cão Guia
+                                                    </label>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>-->
-                                <!-- Submit error message-->
-                                <!--<div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Erro procurando raça!</div></div>-->
-                                <!-- Submit Button-->
-                                <div class="d-grid"><a class="btn btn-primary btn-lg"
-                                        href="racas-encontradas.html">Procurar</a></div>
+                                    </div>
+                                </div>
+                                <div class="d-grid">
+                                    <a class="btn btn-primary btn-lg"
+                                        href="racas-encontradas.html">Procurar</a>
+                                </div>
                             </div>
                         </div>
                     </div>
