@@ -19,9 +19,9 @@
     <meta property="og:url" content="http://127.0.0.1:5500/" />
     <meta property="og:type" content="website" />
 
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="../../public/css/styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon"  href="{{ asset('favicon.ico') }}">
+    <link href="{{ asset('bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('style.css') }}" rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -29,16 +29,14 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
-                <a class="navbar-brand" href="index.blade.html">Wiki Dog</a>
+                <a class="navbar-brand" href="{{ url('/') }}">Wiki Dog</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation"><span
                         class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="index.blade.html">Início</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../../dist/buscar.html">Buscar</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../../dist/cadastrar.html">Cadastrar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Início</a></li>
                     </ul>
                 </div>
             </div>
@@ -57,7 +55,7 @@
                         </div>
                     </div>
                     <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5"
-                            src="../../images/dog-deitado.jpeg" /></div>
+                            src="{{ asset('dog-deitado.jpeg') }}" /></div>
                 </div>
             </div>
         </header>
@@ -148,37 +146,11 @@
                     <div class="row gx-5">
                         <div class="col-lg-6">
                             <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-3 mb-3" src="../../images/labrador.jpg"
+                                <img class="img-fluid rounded-3 mb-3" src=""
                                     style="height: 50vh;" />
                                 <br />
                                 <a class="h3 fw-bolder text-decoration-none link-dark stretched-link"
                                     href="../../dist/detalhar-raca.html">Labrador</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-3 mb-3" src="../../images/rottweiler.jpg"
-                                    style="height: 50vh;" />
-                                <br />
-                                <a class="h3 fw-bolder text-decoration-none link-dark stretched-link"
-                                    href="../../dist/detalhar-raca.html">Rottweiler</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="position-relative mb-5 mb-lg-0">
-                                <img class="img-fluid rounded-3 mb-3" src="../../images/akita.jpg" style="height: 50vh;" />
-                                <br />
-                                <a class="h3 fw-bolder text-decoration-none link-dark stretched-link"
-                                    href="../../dist/detalhar-raca.html">Akita</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="position-relative">
-                                <img class="img-fluid rounded-3 mb-3" src="../../images/sao-bernardo.jpg"
-                                    style="height: 50vh;" />
-                                <br />
-                                <a class="h3 fw-bolder text-decoration-none link-dark stretched-link"
-                                    href="../../dist/detalhar-raca.html">São Bernardo</a>
                             </div>
                         </div>
                     </div>
@@ -194,8 +166,9 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../public/js/scripts.js"></script>
+
+    <script src="{{ asset('bootstrap.js') }}" defer></script>
+    <script src="{{ asset('script.js') }}" defer></script>
 </body>
 
 </html>

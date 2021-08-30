@@ -17,9 +17,9 @@
     <meta property="og:url" content="http://127.0.0.1:5500/" />
     <meta property="og:type" content="website" />
 
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="../public/css/styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon"  href="{{ asset('favicon.ico') }}">
+    <link href="{{ asset('bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('style.css') }}" rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -35,8 +35,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="../resources/views/index.blade.html">Início</a></li>
-                        <li class="nav-item"><a class="nav-link" href="buscar.blade.html">Buscar</a></li>
-                        <li class="nav-item"><a class="nav-link" href="cadastrar.blade.html">Cadastrar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="buscar.blade.php">Buscar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cadastrar.blade.php">Cadastrar</a></li>
                     </ul>
                 </div>
             </div>
@@ -131,10 +131,8 @@
             </div>
         </div>
     </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="../public/js/scripts.js"></script>
+    <script src="{{ asset('bootstrap.js') }}" defer></script>
+    <script src="{{ asset('script.js') }}" defer></script>
 </body>
 
 </html>
