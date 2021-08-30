@@ -1,7 +1,16 @@
-/*!
-* Start Bootstrap - Modern Business v5.0.3 (https://startbootstrap.com/template-overviews/modern-business)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-modern-business/blob/master/LICENSE)
-*/
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
+const fetchDogs = async () => {
+    try {
+        const response = await fetch('https://wikidog-api.herokuapp.com/dogs', {
+            method: 'GET',
+        });
+        const dogs = await response.json();
+
+        dogs.forEach(dog => {
+            console.log(dog);
+        });
+    } catch (error) {
+        console.log('Erro de conexão', error);
+    }
+}
+// Obedient,Companionable,Intelligent,Docile,Loyal,Protective,Playful,Wild,Friendly,Energetic
+// fetchDogs().then(r => console.log(r));

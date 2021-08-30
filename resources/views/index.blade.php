@@ -5,7 +5,6 @@
     <title>Wiki Dog</title>
     <meta property="og:title" content="Wiki Dog"/>
     <meta property="og:site_name" content="Wiki Dog"/>
-    <meta property="og:image" content="public/favicon.ico"/>
     <meta httpEquiv="content-language" content="pt-br"/>
     <meta name="keywords" content="wiki,cachorros,raças"/>
     <meta charset="utf-8"/>
@@ -19,7 +18,7 @@
     <meta property="og:url" content="http://127.0.0.1:5500/"/>
     <meta property="og:type" content="website"/>
 
-    <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="{{asset('favicon.ico')}}">
     <link href="{{ asset('bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('style.css') }}" rel="stylesheet">
 </head>
@@ -66,7 +65,6 @@
             <div class="row">
                 <h6 class="fw-bolder">Aplique seus filtros aqui:</h6>
                 <div class="col-sm-6">
-                    <label for="inlineFormInputName2"></label>
                     <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2"
                            placeholder="Busca">
                 </div>
@@ -83,11 +81,18 @@
                 <div class="col-sm">
                     <div class="mb-3">
                         <select class="form-select" aria-label="Selecione a expectativa de vida do animal">
-                            <option selected>Expectativa de Vida</option>
-                            <option value="less10">até 10 anos</option>
-                            <option value="between10and15">entre 10 e 15 anos</option>
-                            <option value="between15and20">entre 15 e 20 anos</option>
-                            <option value="more20">mais de 20 anos</option>
+                            <option selected>Expectativa de Vida (máxima em anos)</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
                         </select>
                     </div>
                 </div>
@@ -158,6 +163,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 </main>
 <footer class="bg-dark py-4 mt-auto">
