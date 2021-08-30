@@ -153,7 +153,7 @@
                                  style="height: 50vh;"/>
                             <br/>
                             <a class="h3 fw-bolder text-decoration-none link-dark stretched-link"
-                               href="{{ url('detalhar') }}">Labrador</a>
+                               href="{{ url('detalhes') }}">Labrador</a>
                         </div>
                     </div>
                 </div>
