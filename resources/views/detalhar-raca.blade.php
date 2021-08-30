@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <title>Wiki Dog - Labrador</title>
     <meta property="og:title" content="Wiki Dog - Labrador" />
     <meta property="og:site_name" content="Wiki Dog - Labrador" />
-    <meta property="og:image" content="../images/labrador.jpg" />
     <meta httpEquiv="content-language" content="pt-br" />
     <meta name="keywords" content="wiki,cachorros,raças" />
     <meta charset="utf-8" />
@@ -17,9 +16,9 @@
     <meta property="og:url" content="http://127.0.0.1:5500/" />
     <meta property="og:type" content="website" />
 
-    <link rel="icon" type="image/x-icon"  href="{{ asset('favicon.ico') }}">
-    <link href="{{ asset('bootstrap.css') }}" rel="stylesheet">
-    <link href="{{ asset('style.css') }}" rel="stylesheet">
+    <link rel="icon" type="image/x-icon"  href="public/favicon.ico">
+    <link href="public/bootstrap.css" rel="stylesheet">
+    <link href="public/style.css" rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -27,16 +26,14 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
-                <a class="navbar-brand" href="../resources/views/index.blade.html">Wiki Dog</a>
+                <a class="navbar-brand" href="{{ url('/') }}">Wiki Dog</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation"><span
                         class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="../resources/views/index.blade.html">Início</a></li>
-                        <li class="nav-item"><a class="nav-link" href="buscar.blade.php">Buscar</a></li>
-                        <li class="nav-item"><a class="nav-link" href="cadastrar.blade.php">Cadastrar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Início</a></li>
                     </ul>
                 </div>
             </div>
@@ -131,8 +128,8 @@
             </div>
         </div>
     </footer>
-    <script src="{{ asset('bootstrap.js') }}" defer></script>
-    <script src="{{ asset('script.js') }}" defer></script>
+    <script src="public/bootstrap.js" defer></script>
+    <script src="public/script.js" defer></script>
 </body>
 
 </html>
