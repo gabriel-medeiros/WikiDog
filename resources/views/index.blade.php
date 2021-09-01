@@ -19,8 +19,8 @@
     <meta property="og:type" content="website"/>
 
     <link rel="icon" type="image/x-icon" href="{{asset('favicon.ico')}}">
-    <link href="{{asset('bootstrap.css') }}" rel="stylesheet">
-    <link href="{{asset('style.css') }}" rel="stylesheet">
+    <link href="public/bootstrap.css" rel="stylesheet">
+    <link href="public/style.css" rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -55,7 +55,7 @@
                 </div>
                 <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
                     <img class="img-fluid rounded-3 my-5"
-                         src="{{ asset('images/dog-deitado.jpeg')}}" alt="..."/>
+                         src="public/images/dog-deitado.jpeg" alt="..."/>
                 </div>
             </div>
         </div>
@@ -183,8 +183,8 @@
     </div>
 </footer>
 
-<script src="{{asset('bootstrap.js')}}" defer></script>
-<script src="{{asset('script.js')}}" defer></script>
+<script src="public/bootstrap.js" defer></script>
+<script src="public/script.js" defer></script>
 </body>
 
 </html>
