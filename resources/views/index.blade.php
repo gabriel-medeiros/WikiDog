@@ -64,35 +64,20 @@
         <div class="container px-5 my-5">
             <div class="row">
                 <h6 class="fw-bolder">Aplique seus filtros aqui:</h6>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2"
-                           placeholder="Busca">
+                <div class="col-sm-8">
+                    <input type="text" class="form-control mb-2 mr-sm-2" id="search"
+                           name="search" onblur="fetchDogs()"
+                           placeholder="Busque por nome da raça ou origem">
                 </div>
-                <div class="col-sm">
+                <div class="col-sm-4">
                     <div class="mb-3">
-                        <select class="form-select" aria-label="Selecione o porte do animal">
-                            <option selected>Porte</option>
-                            <option value="small">Pequeno</option>
-                            <option value="medium">Médio</option>
-                            <option value="big">Grande</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <div class="mb-3">
-                        <select class="form-select" aria-label="Selecione a expectativa de vida do animal">
-                            <option selected>Expectativa de Vida (máxima em anos)</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
+                        <select class="form-select" name="life_span" id="life_span"
+                                aria-label="Selecione a expectativa de vida do animal"
+                                onchange="fetchDogs()">
+                            <option selected value="">Expectativa de Vida</option>
+                            <option value="10">até 10 anos</option>
+                            <option value="15">até 15 anos</option>
+                            <option value="20">até 20 anos</option>
                         </select>
                     </div>
                 </div>
@@ -103,43 +88,73 @@
                     <div class="row">
                         <div class="col">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="docil" id="docil">
-                                <label class="form-check-label" for="docil">
-                                    Dócil
+                                <input class="form-check-input" type="checkbox" value="Obedient" id="Obedient"
+                                       onclick="fetchDogs()">
+                                <label class="form-check-label" for="Obedient">
+                                    Obediente
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="amigavel" id="amigavel">
-                                <label class="form-check-label" for="amigavel">
-                                    Amigável
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="peludo" id="peludo">
-                                <label class="form-check-label" for="peludo">
-                                    Peludo
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="calmo" id="calmo">
-                                <label class="form-check-label" for="calmo">
-                                    Calmo
+                                <input class="form-check-input" type="checkbox" value="Companionable"
+                                       id="Companionable" onclick="fetchDogs()">
+                                <label class="form-check-label" for="Companionable">
+                                    Companheiro
                                 </label>
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="cao_caca" id="cao_caca">
-                                <label class="form-check-label" for="cao_caca">
-                                    Cão de Caça
+                                <input class="form-check-input" type="checkbox" value="Intelligent" id="Intelligent" onclick="fetchDogs()">
+                                <label class="form-check-label" for="Intelligent">
+                                    Intelligent
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="cao_guia" id="cao_guia">
-                                <label class="form-check-label" for="cao_guia">
-                                    Cão Guia
+                                <input class="form-check-input" type="checkbox" value="Docile" id="Docile" onclick="fetchDogs()">
+                                <label class="form-check-label" for="Docile">
+                                    Docile
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Loyal" id="Loyal" onclick="fetchDogs()">
+                                <label class="form-check-label" for="Loyal">
+                                    Loyal
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Protective" id="Protective" onclick="fetchDogs()">
+                                <label class="form-check-label" for="Protective">
+                                    Protective
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Playful" id="Playful" onclick="fetchDogs()">
+                                <label class="form-check-label" for="Playful">
+                                    Playful
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Wild" id="Wild" onclick="fetchDogs()">
+                                <label class="form-check-label" for="Wild">
+                                    Wild
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Friendly" id="Friendly" onclick="fetchDogs()">
+                                <label class="form-check-label" for="Friendly">
+                                    Friendly
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Energetic" id="Energetic" onclick="fetchDogs()">
+                                <label class="form-check-label" for="Energetic">
+                                    Energetic
                                 </label>
                             </div>
                         </div>
@@ -151,16 +166,8 @@
                     <h1 class="fw-bolder">Raças Encontradas</h1>
                     <p class="lead fw-normal text-muted mb-0">Pelas características informadas encontramos</p>
                 </div>
-                <div class="row gx-5">
-                    <div class="col-lg-6">
-                        <div class="position-relative mb-5">
-                            <img class="img-fluid rounded-3 mb-3" src=""
-                                 style="height: 50vh;"/>
-                            <br/>
-                            <a class="h3 fw-bolder text-decoration-none link-dark stretched-link"
-                               href="{{ url('detalhes') }}">Labrador</a>
-                        </div>
-                    </div>
+                <div class="row gx-5" id="resultados">
+
                 </div>
             </div>
         </div>
