@@ -19,8 +19,8 @@
     <meta property="og:type" content="website"/>
 
     <link rel="icon" type="image/x-icon" href="{{asset('favicon.ico')}}">
-    <link href="{{ asset('bootstrap.css') }}" rel="stylesheet">
-    <link href="{{ asset('style.css') }}" rel="stylesheet">
+    <link href="{{asset('bootstrap.css') }}" rel="stylesheet">
+    <link href="{{asset('style.css') }}" rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column h-100">
